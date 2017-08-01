@@ -34,10 +34,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller("ExampleController", function($scope) {
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-  $scope.series = ['Series A', 'Series B'];
+  $scope.labels = ["12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
+  $scope.series = ['Choro', 'Movimento'];
   $scope.data = [
-  [65, 59, 80, 81, 56, 55, 40],
-  [28, 48, 40, 19, 86, 27, 90]
+  [2, 2, 2, 0, 0, 2, 2],
+  [1, 1, 1, 1, 0, 1, 1]
 ];
 });

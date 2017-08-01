@@ -9,7 +9,7 @@ exports.listar = function (req, res, $scope) {
   });
 };
 // cria dados de choro e movimento
-exports.salvar = function (req, res) {
+exports.criar = function (req, res) {
   req.db.collection('dados').save(req.body, function(err, result) {
     if (err) {
       return res.sendStatus(503);

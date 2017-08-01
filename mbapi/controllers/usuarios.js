@@ -14,7 +14,7 @@ exports.listar = function (req, res) {
 
 // cria um usuari
 exports.criar = function (req, res) {
-  var usuarios = req.body
+  var usuarios = req.body;
 
   req.db.collection('usuario').save(usuarios, function(err, result) {
     if (err) {
