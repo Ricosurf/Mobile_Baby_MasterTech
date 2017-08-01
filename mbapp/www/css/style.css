@@ -1,0 +1,44 @@
+.button.button-block.button-positive{
+  background-color: #20ebb4;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-shadow: #367db8 3px 3px;
+  width: 320px;
+  margin-left: 30px;
+}
+
+.logo01{
+  width: 95%;
+  margin-left: 15px;
+}
+
+.logo02{
+  width: 60%;
+  margin-left: 75px;
+}
+
+.bar.bar-stable{
+  background-color: #20ebb4;
+}
+
+.tab-nav.tabs{
+  background-color: #20ebb4;
+}
+
+.tab-title.ng-binding{
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  color: #367db8;
+}
+
+.title.title-center.header-item{
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  text-shadow: #367db8 3px 3px;
+  font-size: 20px;
+}
+
+.item.item-text-wrap{
+  width: 100%;
+}
