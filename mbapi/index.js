@@ -26,9 +26,11 @@ app.listen(3000, function() {
 
 // importa controllers
 var usuariosController = require('./controllers/usuarios.js');
-
+var dadosController = require('./controllers/dados.js');
 // cria enpoints para funcoes de controllers
 app.get('/usuario', usuariosController.listar);
 app.post('/usuario', usuariosController.criar);
+app.get('/dados', dadosController.listar);
+app.post('/dados', dadosController.criar);
 // app.get('/usuario/:id', usuariosController.recuperar);
 // app.delete('/usuario/:id', usuariosController.apagar);
