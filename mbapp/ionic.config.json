@@ -1,6 +1,6 @@
 {
   "name": "mb",
-  "app_id": "e7ecd08d",
+  "app_id": "9b2535e9",
   "type": "ionic1",
   "watchPatterns": [
     "scss/**/*"

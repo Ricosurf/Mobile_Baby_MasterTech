@@ -10,7 +10,10 @@ exports.listar = function (req, res, $scope) {
 };
 // cria dados de choro e movimento
 exports.criar = function (req, res) {
-  req.db.collection('dados').save(req.body, function(err, result) {
+  var dados = req.query;
+  dados.datetime = new Date();
+  console.log(dados);
+  req.db.collection('dados').save(dados, function(err, result) {
     if (err) {
       return res.sendStatus(503);
     }
