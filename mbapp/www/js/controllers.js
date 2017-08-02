@@ -33,11 +33,40 @@ angular.module('starter.controllers', [])
      }
 })
 
-.controller("ExampleController", function($scope) {
-  $scope.labels = ["12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
+.controller("ExampleController", function($scope, $http, $interval) {
+  $scope.dados = {
+    "choros": [],
+    "movimentos": []
+  };
+
+  $http.get('http://localhost:3000/dados').then(function(resposta){
+    for(var i = 0; i <= resposta.data.length-1; i++){
+      $scope.dados.choros.push(resposta.data[i].choro);
+      $scope.dados.movimentos.push(resposta.data[i].movimento);
+    }
+    // console.log($scope.dados);
+  })
+
+  $scope.labels = ["12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am", "12pm"];
   $scope.series = ['Choro', 'Movimento'];
   $scope.data = [
-  [2, 2, 2, 0, 0, 2, 2],
-  [1, 1, 1, 1, 0, 1, 1]
+  [2, 0, 1, 2],
+  [0, 2, 1, 0]
 ];
+
+$interval(function(){
+  for(var j = 0; j <= 27; j++){
+    $scope.data[0].push($scope.dados.choros[j]);
+  }
+
+  for(var k = 0; k <= 31; k++){
+    $scope.data[1].push($scope.dados.movimentos[j]);
+  }
+
+  // console.log('1');
+  // console.log($scope.data);
+}, 1000, 1);
+
+
+// $scope.data[0].push(0)
 });

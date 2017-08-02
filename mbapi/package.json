@@ -14,6 +14,7 @@
     "express": "^4.15.3",
     "express-mongo-db": "^2.0.3",
     "mongodb": "^2.2.30",
+    "ngrok": "^2.2.15",
     "nodemon": "^1.11.0"
   }
 }
